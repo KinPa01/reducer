@@ -1,5 +1,5 @@
 import { useReducer, useState } from 'react';
-import { initialState, formReducer } from './AddTask'; // นำเข้า reducer
+import { initialState, formReducer } from './AddTask'; 
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Field, Label, Switch } from '@headlessui/react';
 import ListUserComponent from './ListUserComponent';
@@ -10,12 +10,12 @@ export default function FormComponent() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    dispatch({ type: 'SET_FORM_DATA', payload: { name, value } }); // อัพเดท formData
+    dispatch({ type: 'SET_FORM_DATA', payload: { name, value } }); // อัพเดท form
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: 'ADD_PERSON' }); // เพิ่มข้อมูลบุคคลใหม่
+    dispatch({ type: 'ADD_PERSON' }); // เพิ่มคน
   };
 
   return (
@@ -91,7 +91,7 @@ export default function FormComponent() {
         </form>
       </div>
       <div className='px-20'>
-        <ListUserComponent people={state.people} /> {/* ส่งค่า people */}
+        <ListUserComponent people={state.people} />
       </div>
     </>
   );
