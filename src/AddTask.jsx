@@ -34,7 +34,7 @@ function formReducer(state, action) {
       return {
         ...state,
         people: [...state.people, newPerson],
-        formData: initialState.formData // Reset form เชื่อม
+        formData: initialState.formData
       };
     default:
       console.error('Unknown action:', action);
